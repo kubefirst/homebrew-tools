@@ -10,7 +10,7 @@ class Kubefirst < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kubefirst/kubefirst/releases/download/1.8.4/kubefirst_1.8.4_Darwin_arm64.tar.gz"
-      sha256 "c2ac219f9eda80eb69cd3c3cc52b403a6eeeee2522bea827497b003b3673ead3"
+      sha256 "13c73f619cd6def2e03d1e7ffbc0c3d5c97cb8ac421330aff5e20a158ea1696a"
 
       def install
         bin.install "kubefirst"
@@ -18,7 +18,7 @@ class Kubefirst < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubefirst/kubefirst/releases/download/1.8.4/kubefirst_1.8.4_Darwin_x86_64.tar.gz"
-      sha256 "78b76977bae6c1c94f0b8638bd64d9633bfeb4a6a2ffc2a77ba072b6ccbfd8c8"
+      sha256 "c4fabf3f8bc4ff54ef6330aacccbfcfdabb6037a8fd8293ca965cbce6e81e55d"
 
       def install
         bin.install "kubefirst"
@@ -29,7 +29,7 @@ class Kubefirst < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubefirst/kubefirst/releases/download/1.8.4/kubefirst_1.8.4_Linux_arm64.tar.gz"
-      sha256 "e8bd44620847648ea2371007ba944fecb3ad22abe18322b64e96b1e2285d0fca"
+      sha256 "9401025431b88dea190c0467421ef71efe323710914ca75ef79f51ef14033d6a"
 
       def install
         bin.install "kubefirst"
@@ -37,7 +37,7 @@ class Kubefirst < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubefirst/kubefirst/releases/download/1.8.4/kubefirst_1.8.4_Linux_x86_64.tar.gz"
-      sha256 "3e6ce084bf99d36953c53b15e487e4f1d83af4539baa186bea0420aa5216be1f"
+      sha256 "607696c3d25c6afd3928c183060ba538683f68cb41f4a4e724b517da8caa400f"
 
       def install
         bin.install "kubefirst"
