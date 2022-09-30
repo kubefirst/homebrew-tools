@@ -5,20 +5,20 @@
 class Kubefirst < Formula
   desc ""
   homepage "https://github.com/kubefirst/kubefirst"
-  version "1.9.0"
+  version "1.9.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.0/kubefirst_1.9.0_Darwin_arm64.tar.gz"
-      sha256 "9d5f444ba2b9df8aef0221a3024d7911d201872ac14602142756bab1790ae1be"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.1/kubefirst_1.9.1_darwin_arm64.tar.gz"
+      sha256 "b6720ca776ab82c9e6b9e8cb785c38e3961552e5a5f76e8e2f9899c7117f7eb9"
 
       def install
         bin.install "kubefirst"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.0/kubefirst_1.9.0_Darwin_x86_64.tar.gz"
-      sha256 "5cf065173339201433a034ced8fc25fffabfb897ba5523b75c729b1bc5479722"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.1/kubefirst_1.9.1_darwin_amd64.tar.gz"
+      sha256 "7b5965dc6eae681240e9bcbc361d5ba070ddb3798420e704ed53f5614f5c9ac3"
 
       def install
         bin.install "kubefirst"
@@ -27,17 +27,17 @@ class Kubefirst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.0/kubefirst_1.9.0_Linux_arm64.tar.gz"
-      sha256 "876079e2e47c6b02994946853c891f7ad54ce4f856c53736b9d6b11ab0fb2bcb"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.1/kubefirst_1.9.1_linux_amd64.tar.gz"
+      sha256 "4d77136cde94ab18f315bb1352c9d6cb1360fd7c9e6c4b7958c0c6cf4c879957"
 
       def install
         bin.install "kubefirst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.0/kubefirst_1.9.0_Linux_x86_64.tar.gz"
-      sha256 "97afcc2d97dd0a4db33919975fe3996ebab1c86f5f9b4164dc139a6d10ddccef"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.9.1/kubefirst_1.9.1_linux_arm64.tar.gz"
+      sha256 "9f46b60c97abbe692598e2dbf8b4ade8bf690f06a4cc30b47cee4b9e5e9b0c50"
 
       def install
         bin.install "kubefirst"
