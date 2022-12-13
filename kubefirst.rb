@@ -5,20 +5,20 @@
 class Kubefirst < Formula
   desc ""
   homepage "https://github.com/kubefirst/kubefirst"
-  version "1.10.8"
+  version "1.10.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.8/kubefirst_1.10.8_darwin_amd64.tar.gz"
-      sha256 "ccaf92872f34d2ca44e0128e3629d115417efa02eb004970f7fe012215b03002"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.9/kubefirst_1.10.9_darwin_amd64.tar.gz"
+      sha256 "34deeac1a04fd8e309335c6bbdfd489fc89254143b093e14fd24864b5950ecd9"
 
       def install
         bin.install "kubefirst"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.8/kubefirst_1.10.8_darwin_arm64.tar.gz"
-      sha256 "4342ffdc2283a9354fc72f286929da32941bece004fa73fea43d60d22c5fc31f"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.9/kubefirst_1.10.9_darwin_arm64.tar.gz"
+      sha256 "c984c1854edf9428549e6ba85e1f5ad3a4476da3e7b6ff96d066dc4f80b39b3f"
 
       def install
         bin.install "kubefirst"
@@ -28,16 +28,16 @@ class Kubefirst < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.8/kubefirst_1.10.8_linux_arm64.tar.gz"
-      sha256 "9ff39a511f43900d386ebebb699da5a60aecd33b3f6db2ea81e42a07824f30d8"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.9/kubefirst_1.10.9_linux_arm64.tar.gz"
+      sha256 "6481784bfcc88504312afb8c2becee3ed5cf88aedba4ddf4a616bd32126cf121"
 
       def install
         bin.install "kubefirst"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.8/kubefirst_1.10.8_linux_amd64.tar.gz"
-      sha256 "17412fa8210d71db110012d176972ed3041ebddf16e5e065eb09f754aa3d86f2"
+      url "https://github.com/kubefirst/kubefirst/releases/download/1.10.9/kubefirst_1.10.9_linux_amd64.tar.gz"
+      sha256 "b4991fa4d1b8aa8906d94d404246f690114376d83026078c0184f6f9389bcee6"
 
       def install
         bin.install "kubefirst"
