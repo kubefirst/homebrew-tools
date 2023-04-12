@@ -10,17 +10,17 @@ class Kubefirst < Formula
   depends_on "aws-iam-authenticator"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_darwin_arm64.tar.gz"
-      sha256 "6177bb2b660ce5effa1c4a3d7c48e777366a970d30669e61b34d9a053890a000"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_darwin_amd64.tar.gz"
+      sha256 "aea67d4c697ea518ad51a7780ee6de5c8b1b8656888116274688fa08cba1c2e2"
 
       def install
         bin.install "kubefirst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_darwin_amd64.tar.gz"
-      sha256 "d8081b754e25cd283ceb8788ae37927366be6439b14f15651d63a06e21506dc3"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_darwin_arm64.tar.gz"
+      sha256 "84cf84c99381275e83a49ab9a3412d8e91ab36dfaaf122d7d12578feb1f33ab5"
 
       def install
         bin.install "kubefirst"
@@ -31,7 +31,7 @@ class Kubefirst < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_linux_arm64.tar.gz"
-      sha256 "c91e5701029f94eb28c790e63e40c803688f45f3c2ecc5ab479ab9c1eac352ea"
+      sha256 "7f7d0effe4ed0840bc3bf716cecd05e8b382ec541f50d9d1d5345ee6b4137b97"
 
       def install
         bin.install "kubefirst"
@@ -39,7 +39,7 @@ class Kubefirst < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubefirst/kubefirst/releases/download/v2.0.1/kubefirst_2.0.1_linux_amd64.tar.gz"
-      sha256 "d43c6df6c31bd8cccd20cff3ac1980ee259a650e90f7c5461f56397c7a2f503a"
+      sha256 "ab93b16134f898b9411cafba27c71ff9e3b23ae8f41573a41e498ca403ddc033"
 
       def install
         bin.install "kubefirst"
