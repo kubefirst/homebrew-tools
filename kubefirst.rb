@@ -5,22 +5,22 @@
 class Kubefirst < Formula
   desc ""
   homepage "https://github.com/kubefirst/kubefirst"
-  version "2.3.8"
+  version "2.4.0"
 
   depends_on "aws-iam-authenticator"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.3.8/kubefirst_2.3.8_darwin_amd64.tar.gz"
-      sha256 "55732cd35537e894e6bf82a02e7493c512a2c641e8cfefb1812c24dd41629891"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.0/kubefirst_2.4.0_darwin_arm64.tar.gz"
+      sha256 "e338ba37d3c8402d54f8c88eda02f7fe9149114fc44ec9e7f01e5454d26357a7"
 
       def install
         bin.install "kubefirst"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.3.8/kubefirst_2.3.8_darwin_arm64.tar.gz"
-      sha256 "aa8dde5bb8b9e1e55ea257a3c54314af3eadcee3f351b4b32ce77037091289c0"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.0/kubefirst_2.4.0_darwin_amd64.tar.gz"
+      sha256 "fd6c88f986161108b338f0d319b9115be0afa4ba2561dec71e64b18c577b3244"
 
       def install
         bin.install "kubefirst"
@@ -30,16 +30,16 @@ class Kubefirst < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.3.8/kubefirst_2.3.8_linux_arm64.tar.gz"
-      sha256 "34edfd03c329fcbe001bf046b4d48483b4e3e81d86f1a6101f100207922d274e"
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.0/kubefirst_2.4.0_linux_arm64.tar.gz"
+      sha256 "12e7730eb861f40542849794f3e57997f1268310fea4d4a462b5a7c00a7c114a"
 
       def install
         bin.install "kubefirst"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.3.8/kubefirst_2.3.8_linux_amd64.tar.gz"
-      sha256 "24bdb3134b5fbd5a1f635b058876db25bb4cb14de23049eceff842af5edbec17"
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.0/kubefirst_2.4.0_linux_amd64.tar.gz"
+      sha256 "cbb5d7b3fff1c5b2bf919b8f5fa429fa0e7fb2259bd755e8c0ebc6b4e5500951"
 
       def install
         bin.install "kubefirst"
