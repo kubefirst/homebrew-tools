@@ -5,22 +5,22 @@
 class Kubefirst < Formula
   desc ""
   homepage "https://github.com/kubefirst/kubefirst"
-  version "2.4.3"
+  version "2.4.4"
 
   depends_on "aws-iam-authenticator"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.3/kubefirst_2.4.3_darwin_arm64.tar.gz"
-      sha256 "20f0b2b54398dfa0e92edf591abf31f80f5f24566671eddb52c47d9f1b91db25"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.4/kubefirst_2.4.4_darwin_amd64.tar.gz"
+      sha256 "bed1828e1841e5eefcbd1b66f00138afc0d8958abd258f0e26323330838dc5ea"
 
       def install
         bin.install "kubefirst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.3/kubefirst_2.4.3_darwin_amd64.tar.gz"
-      sha256 "0a0fa9b4049eea1671f173903f80051264c95d6a9cd568ad612c81ac97d36853"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.4/kubefirst_2.4.4_darwin_arm64.tar.gz"
+      sha256 "6d2a0fe30c973cfd843414b9fb7ba5640ac613946520eb4ffb08332cb8b3a9ff"
 
       def install
         bin.install "kubefirst"
@@ -29,17 +29,17 @@ class Kubefirst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.3/kubefirst_2.4.3_linux_arm64.tar.gz"
-      sha256 "0e20e7e9005e694d455d6e5d5594aa243546dca849c9f56ef2d314365b3cc8ea"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.4/kubefirst_2.4.4_linux_amd64.tar.gz"
+      sha256 "3df71b653e63619524bed3a741fea6bc1d1ad57febe63dfd4a0ad65953311100"
 
       def install
         bin.install "kubefirst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.3/kubefirst_2.4.3_linux_amd64.tar.gz"
-      sha256 "ba5ef58846cc0ef5f2e435b01f71c78f8e75e512b8d769073569593a27d41080"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubefirst/kubefirst/releases/download/v2.4.4/kubefirst_2.4.4_linux_arm64.tar.gz"
+      sha256 "0b7783ecc3f048e81e63486c038c17113def5b5b880d025fd2ffb57c377ebbe0"
 
       def install
         bin.install "kubefirst"
