@@ -5,7 +5,7 @@
 class Kubefirst < Formula
   desc ""
   homepage "https://github.com/kubefirst/kubefirst"
-  version "2.4.17"
+  version "2.6.1"
 
   depends_on "aws-iam-authenticator"
 
